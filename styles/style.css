@@ -187,14 +187,13 @@ header nav ul li {
     right: 0;
     bottom: -4.357rem;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-
-    /* display: none; */
 }
 
 
 .btn-outline:hover {
-    color: #000;
-    border: 1px solid #000;
+    color: #fff;
+    background-color: #E02C6D;
+    /* border: 1px solid #000; */
 }
 
 
@@ -268,6 +267,8 @@ header nav ul li {
     margin: auto;
     width: 100%;
     object-fit: contain;
+    min-width: 250px;
+    max-width: 350px;
 }
 
 /* -------------- Footer Section --------------- */
@@ -301,6 +302,14 @@ footer ul li {
 }
 
 /*-------------- Utilities --------------------*/
+.fab {
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.fab:hover {
+    color: #E02C6D;
+}
+
 .container {
     max-width: 64rem;
     margin-inline: auto;
@@ -309,6 +318,7 @@ footer ul li {
 .btn {
     display: inline-block;
     border: 1px solid #FB8200;
+    border-radius: 5px;
     text-decoration: none;
     color: #fff;
     font-weight: 600;
@@ -403,6 +413,8 @@ footer ul li {
         flex-direction: column;
     }
 
+
+
     /* .customer {
         gap: 1.5rem;
         margin-top: 6.25rem;
@@ -455,6 +467,11 @@ footer ul li {
         gap: 1rem;
         grid-template-columns: 1fr;
     }
+
+    /* .customer__person {
+        flex: 1 0 50%;
+
+    } */
 
     footer ul {
 
