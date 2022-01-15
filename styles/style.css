@@ -18,13 +18,32 @@ ul li {
 
 /* ------------------ Header Section ---------------------- */
 header {
-    display: none;
+    /* display: none; */
 }
 
 header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+header nav .logo {}
+
+header nav .hamburger {}
+
+header nav .logo h2 {
+    width: max-content;
+}
+
+header nav .hamburger {
+    display: none;
+}
+
+header nav .hamburger>div {
+    width: 25px;
+    height: 2px;
+    background-color: #0A0826;
+    margin-block-end: 3px;
 }
 
 header nav ul {
@@ -57,6 +76,11 @@ header nav ul li {
 .hero .hero__text p {
     margin-bottom: 1.5rem;
 }
+
+.hero .hero__text {
+    position: relative;
+}
+
 
 .hero .hero__image img {
     display: block;
@@ -116,9 +140,21 @@ header nav ul li {
     display: block;
     width: 100%;
     object-fit: contain;
+    transition: all 0.2s ease;
+}
+
+.collection__item .collection__img {
+    overflow: hidden;
+
+}
+
+.collection__item:hover .collection__img img {
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 .collection__item .collection__name {
+    color: firebrick;
     font-size: 1.75rem;
     font-weight: 600;
     margin: 1rem 0 0.5rem;
@@ -140,12 +176,23 @@ header nav ul li {
 .btn-outline {
     display: inline-block;
     text-decoration: none;
+    border: 1px solid #E02C6D;
+    border-radius: 5px;
     color: #E02C6D;
+    font-weight: 600;
+    padding: 0.6em 1.6em;
     position: absolute;
     right: 0;
-    bottom: -2.5rem;
-    /* padding: 0.6em 1.6em; */
+    bottom: -4.357rem;
+    transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+
     /* display: none; */
+}
+
+
+.btn-outline:hover {
+    color: #000;
+    border: 1px solid #000;
 }
 
 
@@ -155,8 +202,7 @@ header nav ul li {
     justify-content: space-between;
     align-items: center;
     gap: 3rem;
-    margin-top: 6.25rem;
-    display: none;
+    margin-top: 10.25rem;
 }
 
 
@@ -198,14 +244,23 @@ footer ul li {
 
 .btn {
     display: inline-block;
+    border: 1px solid #FB8200;
     text-decoration: none;
     color: #fff;
+    font-weight: 600;
     padding: 0.6em 1.6em;
     background-color: #E02C6D;
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .btn--round {
     border-radius: 40px;
+}
+
+.btn:hover {
+    border: 1px solid #E02C6D;
+    background-color: transparent;
+    color: #000;
 }
 
 
@@ -222,6 +277,19 @@ footer ul li {
 
     p {
         font-size: 0.875rem;
+    }
+
+    header {
+        overflow: hidden;
+    }
+
+    header nav .menu {
+        display: none;
+        transform: translateX(1000px);
+    }
+
+    header nav .hamburger {
+        display: block;
     }
 
     .hero-flex {
@@ -262,6 +330,13 @@ footer ul li {
     .collection__item .collection__price {
         font-size: 1.75rem;
         margin: 0rem;
+    }
+
+    .feature {
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
     }
 
 }
